@@ -16,13 +16,13 @@ const Input = styled.input`
     font-family: "Lato", sans-serif;
     font-size: 1.6rem;
     font-weight: 700;
-    background-color: #f8f8f8;
+    background-color: #f2f2f2;
     outline: none;
     margin-bottom: 2.5rem;
 
     &:active,
     &:focus {
-        border-color: #0000ff;
+        border-color: #00a2e7;
     }
 `;
 

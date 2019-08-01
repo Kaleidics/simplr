@@ -7,7 +7,7 @@ export const FormWrapper = styled.div`
     width: 65.6rem;
     height: 90.6rem;
     margin: 5% 0;
-    padding: 2.5rem;
+    padding: 3rem;
     background-color: #fff;
     box-shadow: 1px 1px 3px 2px #f5f5f5;
     position: relative;
@@ -21,7 +21,7 @@ export const Form = styled.form`
     width: 32rem;
 
     @media (max-width: 320px) {
-        width: 28rem;
+        width: 26rem;
     }
 `;
 
@@ -29,7 +29,7 @@ export const Fieldset = styled.fieldset`
     display: flex;
     flex-direction: column;
     border: none;
-    margin: 2rem 0;
+    margin: 3rem 0;
 `;
 
 export const Legend = styled.legend`

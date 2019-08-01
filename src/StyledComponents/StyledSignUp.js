@@ -7,19 +7,29 @@ export const FormWrapper = styled.div`
     width: 65.6rem;
     height: 90.6rem;
     margin: 5% 0;
-    padding: 8.4rem 16.8rem;
+    padding: 2.5rem;
     background-color: #fff;
     box-shadow: 1px 1px 3px 2px #f5f5f5;
+    position: relative;
+
+    @media (max-width: 560px) {
+        margin: 0;
+    }
 `;
 
 export const Form = styled.form`
     width: 32rem;
+
+    @media (max-width: 320px) {
+        width: 28rem;
+    }
 `;
 
 export const Fieldset = styled.fieldset`
     display: flex;
     flex-direction: column;
     border: none;
+    margin: 2rem 0;
 `;
 
 export const Legend = styled.legend`
@@ -29,4 +39,8 @@ export const Legend = styled.legend`
     text-align: center;
     font-size: 3.2rem;
     font-weight: 300;
+
+    @media (max-width: 320px) {
+        font-size: 2.8rem;
+    }
 `;

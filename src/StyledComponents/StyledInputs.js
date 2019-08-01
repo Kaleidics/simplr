@@ -36,3 +36,37 @@ export const Select = styled.select`
     box-shadow: 0 2px 2px -1px #e5e5e5;
     background-color: transparent;
 `;
+
+
+export const CheckBoxWrapper = styled.div`
+           margin-bottom: 1.5rem;
+
+           div {
+               color: #2b2b2b;
+               font-size: 1.4rem;
+               line-height: 1.5;
+               font-weight: 700;
+           }
+
+           a,
+           a:link,
+           a:visited {
+               color: #00a2e7;
+           }
+       `;
+
+export const CheckBoxLabel = styled.label`
+           font-size: 1.4rem;
+           color: #6f6f6f;
+       `;
+
+export const CheckBox = styled.input`
+    width: 1.3rem;
+    height: 1.3rem;
+    padding: 0;
+    margin: 0 .5rem 0 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+`;

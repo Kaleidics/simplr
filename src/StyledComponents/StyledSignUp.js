@@ -6,7 +6,7 @@ export const FormWrapper = styled.div`
     align-items: center;
     width: 65.6rem;
     height: 90.6rem;
-    margin: 5% 0;
+    margin: 10rem 0;
     padding: 3rem;
     background-color: #fff;
     box-shadow: 1px 1px 3px 2px #f5f5f5;
@@ -20,7 +20,7 @@ export const FormWrapper = styled.div`
 export const Form = styled.form`
     width: 32rem;
 
-    @media (max-width: 320px) {
+    @media (max-width: 360px) {
         width: 26rem;
     }
 `;

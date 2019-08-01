@@ -1,8 +1,9 @@
 import React from 'react';
-import { FormWrapper, Form, Fieldset, Legend, ImageTopLeft } from "../StyledComponents/index";
+import { FormWrapper, Form, Fieldset, Legend, ImageTopLeft, CheckBox, BlueButton } from "../StyledComponents/index";
 
 import FormInput from '../components/FormInput';
 import FormSelect from '../components/FormSelect';
+import FormCheckBox from '../components/FormCheckBox'
 
 import logo from '../assets/logo.svg';
 
@@ -13,7 +14,7 @@ export default class SignUp extends React.Component {
         return (
             <FormWrapper>
                 <ImageTopLeft src={logo} alt="simplr" />
-                <Form>
+                <Form noValidate>
                     <Fieldset>
                         <Legend>let's get started</Legend>
                         <FormInput id={"business"} label={"Business Name"} type={"text"} />
@@ -22,7 +23,10 @@ export default class SignUp extends React.Component {
                         <FormInput id={"password"} label={"Password"} type={"password"} />
                         <FormInput id={"website"} label={"Website"} type={"text"} />
                         <FormSelect id={"type"} label={"Type of Business"} options={["Daycare", "Restaurant", "Dealership"]} />
+                        <FormCheckBox id={"terms"} label={"Terms of Service"} labelOption={"terms of services"} optionLink={"https://www.simplr.ai/"} type={"checkbox"} />
+                        <FormCheckBox id={"terms"} label={"Privacy Policy"} labelOption={"privacy policy"} optionLink={"https://www.simplr.ai/"} type={"checkbox"} />
                     </Fieldset>
+                    <BlueButton>Register</BlueButton>
                 </Form>
             </FormWrapper>
         );

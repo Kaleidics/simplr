@@ -1,6 +1,7 @@
 # [Simplr Code Test](https://simplrcode.netlify.com/)
 
 Eddie Chu
+
 This is the repo for the Simplr front end test.
 
 Deployed live at [Simplr Code Test](https://simplrcode.netlify.com/)

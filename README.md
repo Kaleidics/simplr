@@ -39,5 +39,5 @@ npm install
 ```
 3. Run `npm start` to start the application.
 
-#Owner 
+
 **Eddie Chu** - [eddiechu.dev](https://www.eddiechu.dev/)

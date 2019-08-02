@@ -17,7 +17,13 @@ export default function validate(payload) {
     const {business, email, username, password, type, policy, terms } = payload;
 
     let errors = {
-
+        businessError: "",
+        emailError: "",
+        usernameError: "",
+        passwordError: "",
+        typeError: "",
+        policyError: "",
+        termsError: "",
     }
 
     if (!business) {

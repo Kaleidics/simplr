@@ -38,6 +38,9 @@ git clone https://github.com/Kaleidics/simplr.git
 npm install
 ```
 3. Run `npm start` to start the application.
+```
+npm start
+```
 
 
 **Eddie Chu** - [eddiechu.dev](https://www.eddiechu.dev/)

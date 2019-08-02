@@ -20,11 +20,11 @@ export default class SignUp extends React.Component {
                         <FormInput id={"business"} label={"Business Name"} type={"text"} />
                         <FormInput id={"email"} label={"Business Email"} type={"email"} />
                         <FormInput id={"username"} label={"Create a Username"} type={"text"} />
-                        <FormInput id={"password"} label={"Password"} type={"password"} />
-                        <FormInput id={"website"} label={"Website"} type={"text"} />
+                        <FormInput id={"password"} label={"Password"} tooltip={" 6 characters | 1 uppercase | 1 lowercase | 1 digit"} type={"password"} />
+                        <FormInput id={"website"} label={"Website"} tooltip={" (Optional)"} type={"text"} />
                         <FormSelect id={"type"} label={"Type of Business"} options={["Daycare", "Restaurant", "Dealership"]} />
                         <FormCheckBox id={"terms"} label={"Terms of Service"} labelOption={"terms of services"} optionLink={"https://www.simplr.ai/"} type={"checkbox"} />
-                        <FormCheckBox id={"terms"} label={"Privacy Policy"} labelOption={"privacy policy"} optionLink={"https://www.simplr.ai/"} type={"checkbox"} />
+                        <FormCheckBox id={"policy"} label={"Privacy Policy"} labelOption={"privacy policy"} optionLink={"https://www.simplr.ai/"} type={"checkbox"} />
                     </Fieldset>
                     <BlueButton>Register</BlueButton>
                 </Form>

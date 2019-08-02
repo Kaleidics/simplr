@@ -47,7 +47,7 @@ export const Select = styled.select`
     background-color: transparent;
 `;
 
-//custom checkbox input with center aligned text
+//checkbox input container used to help align elements
 export const CheckBoxWrapper = styled.div`
     margin-bottom: 1.5rem;
 
@@ -62,21 +62,72 @@ export const CheckBoxWrapper = styled.div`
     a:link,
     a:visited {
         color: #00a2e7;
+        text-decoration: none;
+        border-bottom: 1px solid #00a2e7;
     }
 `;
 
-export const CheckBoxLabel = styled.label`
-    font-size: 1.4rem;
-    color: #6f6f6f;
-`;
-
+//default checkbox input is hidden
 export const CheckBox = styled.input`
-    width: 1.3rem;
-    height: 1.3rem;
+    height: 0;
+    width: 0;
     padding: 0;
     margin: 0 0.5rem 0 0;
     vertical-align: bottom;
-    position: relative;
     top: -1px;
+
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
     *overflow: hidden;
+`;
+
+export const CustomCheckBox = styled.span`
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: transparent;
+    border: 1px solid #4b4b4b;
+
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+`;
+
+//label for checkbox, also holds css state logic
+export const CheckBoxLabel = styled.label`
+    font-size: 1.4rem;
+    color: #6f6f6f;
+    position: relative;
+    display: block;
+    position: relative;
+    padding-left: 2.5rem;
+    cursor: pointer;
+
+    &:hover ${CheckBox} ~ span {
+        background-color: #c3c3c3;
+    }
+
+    & > ${CheckBox}:checked ~ span {
+        background-color: #4b4b4b;
+    }
+
+    & > ${CheckBox}:checked ~ ${CustomCheckBox}:after {
+        display: block;
+    }
+
+    & > ${CustomCheckBox}:after {
+        left: 0.6rem;
+        top: 0.2rem;
+        width: 0.7rem;
+        height: 1.2rem;
+        border: 1px solid #fff;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
 `;

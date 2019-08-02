@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckBoxWrapper, CheckBoxLabel, CheckBox } from "../StyledComponents/index";
+import { CheckBoxWrapper, CheckBoxLabel, CheckBox, CustomCheckBox } from "../StyledComponents/index";
 
 export default function FormCheckBox(props) {
     return (
@@ -7,6 +7,7 @@ export default function FormCheckBox(props) {
             <div>{props.label}</div>
             <CheckBoxLabel htmlFor={props.id}>
                 <CheckBox id={props.id} type={props.type} />
+                <CustomCheckBox></CustomCheckBox>
                 I have read and I do accept &nbsp;
                 <a target="_blank" href={props.optionLink} rel="noopener noreferrer">
                     {props.labelOption}

@@ -8,7 +8,7 @@ export default function FormInput(props) {
                 {props.label}
                 <ToolTip>{props.tooltip}</ToolTip>
             </Label>
-            <Input id={props.id} type={props.type} onChange={e => props.onChange(e)} />
+            <Input id={props.id} type={props.type} onChange={e => props.onChange(e)} value={props.value}/>
         </>
     );
 }

@@ -38,10 +38,26 @@ export default class SignUp extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    checkErrors(obj) {
+        for (var key in obj) {
+            if (obj[key] != "")
+                return false;
+        }
+        return true;
+    }
+
     handleSubmit(e) {
         e.preventDefault();
-        if (Object.keys(validate(this.state)).length === 0) {
+        this.setState(validate(this.state));
+        if (this.checkErrors(validate(this.state))) {
             this.setState({
+                businessError: "",
+                emailError: "",
+                usernameError: "",
+                passwordError: "",
+                typeError: "",
+                termsError: "",
+                policyError: "",
                 business: "",
                 email: "",
                 username: "",
@@ -51,17 +67,13 @@ export default class SignUp extends React.Component {
                 terms: false,
                 policy: false
             });
-            alert("success", this.state);
-        } else {
-            this.setState(validate(this.state));
-        }
-        
+            console.log("Success!", this.state);
+            alert("Success!");
+        } 
+        return;
     }
 
-    
-
     render() {
-        console.log(this.state)
         return (
             <FormWrapper>
                 <ImageTopLeft src={logo} alt="simplr" />

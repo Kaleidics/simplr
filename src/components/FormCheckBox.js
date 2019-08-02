@@ -1,8 +1,9 @@
 import React from "react";
-import { CheckBoxWrapper, CheckBoxLabel, CheckBox, CustomCheckBox } from "../StyledComponents/index";
+import {InputWrapper, CheckBoxWrapper, CheckBoxLabel, CheckBox, CustomCheckBox, InputError } from "../StyledComponents/index";
 
 export default function FormCheckBox(props) {
     return (
+        <InputWrapper>
         <CheckBoxWrapper>
             <div>{props.label}</div>
             <CheckBoxLabel htmlFor={props.id}>
@@ -13,5 +14,7 @@ export default function FormCheckBox(props) {
                 </a>
             </CheckBoxLabel>
         </CheckBoxWrapper>
+        <InputError>{props.error}</InputError>
+        </InputWrapper>
     );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Label, Select } from "../StyledComponents/index";
+import {InputWrapper, Label, Select, InputError } from "../StyledComponents/index";
 
 export default function FormSelect(props) {
 
@@ -8,12 +8,13 @@ export default function FormSelect(props) {
     });
 
     return (
-        <>
+        <InputWrapper>
             <Label htmlFor={props.id}>{props.label}</Label>
             <Select id={props.id} value={props.value} onChange={props.onChange}>
                 <option value="">Select your business</option>
                 {options}
             </Select>
-        </>
+            <InputError>{props.error}</InputError>
+        </InputWrapper>
     );
 }

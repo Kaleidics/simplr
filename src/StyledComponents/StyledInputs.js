@@ -1,5 +1,10 @@
 import styled, { css } from "styled-components";
 
+export const InputWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    position: relative;
+`;
 //general label for input
 export const Label = styled.label`
     font-size: 1.6rem;

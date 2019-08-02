@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 //general purpose button with default black color
 export const GeneralButton = css`

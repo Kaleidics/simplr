@@ -5,7 +5,7 @@ import FormInput from "../components/FormInput";
 import FormSelect from "../components/FormSelect";
 import FormCheckBox from "../components/FormCheckBox";
 
-import validate from '../validation/validate';
+import validate from "../validation/validate";
 
 import logo from "../assets/logo.svg";
 
@@ -14,7 +14,6 @@ export default class SignUp extends React.Component {
         super(props);
 
         this.state = {
-
             //programmatic error handling
             businessError: "",
             emailError: "",
@@ -38,14 +37,15 @@ export default class SignUp extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    //checks for errors by looking for a error values in error object
     checkErrors(obj) {
         for (var key in obj) {
-            if (obj[key] != "")
-                return false;
+            if (obj[key] != "") return false;
         }
         return true;
     }
 
+    //a little long I know, this is how I've been resetting state/forms, works so far
     handleSubmit(e) {
         e.preventDefault();
         this.setState(validate(this.state));
@@ -69,7 +69,7 @@ export default class SignUp extends React.Component {
             });
             console.log("Success!", this.state);
             alert("Success!");
-        } 
+        }
         return;
     }
 

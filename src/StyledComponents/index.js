@@ -1,4 +1,4 @@
-export {InputWrapper, Label, Input, Select, CheckBoxWrapper, CustomCheckBox, CheckBox, CheckBoxLabel, ToolTip } from "./StyledInputs";
+export { InputWrapper, Label, Input, Select, CheckBoxWrapper, CustomCheckBox, CheckBox, CheckBoxLabel, ToolTip } from "./StyledInputs";
 
 export { FormWrapper, Form, Fieldset, Legend } from "./StyledSignUp";
 

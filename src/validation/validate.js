@@ -10,11 +10,10 @@ const error = {
     i: "Please select a business type.",
     j: "Please accept terms of services.",
     k: "Please accept Privacy Policy."
-}
+};
 
 export default function validate(payload) {
-
-    const {business, email, username, password, type, policy, terms } = payload;
+    const { business, email, username, password, type, policy, terms } = payload;
 
     let errors = {
         businessError: "",
@@ -23,17 +22,17 @@ export default function validate(payload) {
         passwordError: "",
         typeError: "",
         policyError: "",
-        termsError: "",
-    }
+        termsError: ""
+    };
 
     if (!business) {
         errors.businessError = error.a;
     }
 
     //checks for valid email via @ character
-    if (!email || !(/@/.test(email))) {
+    if (!email || !/@/.test(email)) {
         errors.emailError = error.b;
-    } 
+    }
 
     if (!username) {
         errors.usernameError = error.c;

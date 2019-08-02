@@ -5,6 +5,8 @@ import FormInput from "../components/FormInput";
 import FormSelect from "../components/FormSelect";
 import FormCheckBox from "../components/FormCheckBox";
 
+import validate from '../validation/validate';
+
 import logo from "../assets/logo.svg";
 
 export default class SignUp extends React.Component {
@@ -12,6 +14,17 @@ export default class SignUp extends React.Component {
         super(props);
 
         this.state = {
+
+            //programmatic error handling
+            businessError: "",
+            emailError: "",
+            usernameError: "",
+            passwordError: "",
+            typeError: "",
+            termsError: "",
+            policyError: "",
+
+            ////////////
             business: "",
             email: "",
             username: "",
@@ -29,6 +42,7 @@ export default class SignUp extends React.Component {
         e.preventDefault();
         alert("success", this.state);
         console.log(this.state);
+        console.log("valiation", validate(this.state));
         this.setState({
             business: "",
             email: "",

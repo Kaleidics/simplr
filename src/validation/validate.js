@@ -47,11 +47,11 @@ export default function validate(payload) {
     }
 
     if (!policy) {
-        errors.policyError = error.j;
+        errors.policyError = error.k;
     }
 
     if (!terms) {
-        errors.termsError = error.k;
+        errors.termsError = error.j;
     }
 
     //if user has inputted a password we do a more extensive check and

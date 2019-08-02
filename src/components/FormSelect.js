@@ -10,7 +10,7 @@ export default function FormSelect(props) {
     return (
         <>
             <Label htmlFor={props.id}>{props.label}</Label>
-            <Select id={props.id}>
+            <Select id={props.id} value={props.value} onChange={props.onChange}>
                 <option value="">Select your business</option>
                 {options}
             </Select>

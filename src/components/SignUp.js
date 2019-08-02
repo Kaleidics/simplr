@@ -43,7 +43,9 @@ export default class SignUp extends React.Component {
                         <FormInput id={"username"} label={"Create a Username"} type={"text"} onChange={e => this.setState({ username: e.target.value })} />
                         <FormInput id={"password"} label={"Password"} tooltip={" 6 characters | 1 uppercase | 1 lowercase | 1 digit"} type={"password"} onChange={e => this.setState({ password: e.target.value })} />
                         <FormInput id={"website"} label={"Website"} tooltip={" (Optional)"} type={"text"} onChange={e => this.setState({ website: e.target.value })} />
-                        <FormSelect id={"type"} label={"Type of Business"} options={["Daycare", "Restaurant", "Dealership"]} />
+
+                        <FormSelect id={"type"} label={"Type of Business"} options={["Daycare", "Restaurant", "Dealership"]} onChange={e => this.setState({ type: e.target.value })} value={this.state.type} />
+
                         <FormCheckBox id={"terms"} label={"Terms of Service"} labelOption={"terms of services"} optionLink={"https://www.simplr.ai/"} type={"checkbox"} onChange={e => this.setState({ terms: e.target.checked })} />
                         <FormCheckBox id={"policy"} label={"Privacy Policy"} labelOption={"privacy policy"} optionLink={"https://www.simplr.ai/"} type={"checkbox"} onChange={e => this.setState({ policy: e.target.checked })} />
                     </Fieldset>

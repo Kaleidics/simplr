@@ -30,6 +30,8 @@ export default function validate(payload) {
     }
 
     //checks for valid email via @ character
+    //was also going to check for .com but then I realized there are hundreds of domains names .net .org .io etc...
+    //not feasible to check string wise
     if (!email || !/@/.test(email)) {
         errors.emailError = error.b;
     }

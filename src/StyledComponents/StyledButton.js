@@ -12,6 +12,7 @@ export const GeneralButton = css`
     cursor: pointer;
     text-transform: uppercase;
     margin: 10rem auto 2rem auto;
+    font-family: inherit;
 `;
 
 //custom button, inherits the general purpose button style and we set it blue for the form
